@@ -79,7 +79,7 @@ function renderizarTabla(){
                 <td class="product__price">$ ${producto.price}</td>
                 <td class="product__others">
                       <i class="fa-solid fa-box"></i>
-                      <i class="fa-solid fa-box"></i>
+                      <i class="fa-solid fa-gamepad"></i>
                 
                 </td>
                 <td class = "product__actions">
