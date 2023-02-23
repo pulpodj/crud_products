@@ -56,6 +56,13 @@ const Products = [
     }
 ];
 
+swal({
+    title: 'Bienvenido a SweetAlert',
+    text: 'Este modal o dialogo',
+    icon: 'info',
+    timer: 3000
+});
+
 const tableBody = document.querySelector('#table-body');
 
 function renderizarTabla(){
@@ -70,8 +77,22 @@ function renderizarTabla(){
                 <td>${producto.name}</td>
                 <td class="product__desc">${producto.description}</td>
                 <td class="product__price">$ ${producto.price}</td>
-                <td class="product__others">📦🎮</td>
-                <td class = "product__actions">🗑✏⭐</td>
+                <td class="product__others">
+                      <i class="fa-solid fa-box"></i>
+                      <i class="fa-solid fa-box"></i>
+                
+                </td>
+                <td class = "product__actions">
+                <button class= "product__action-btn">
+                <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class= "product__action-btn btn-edit">
+                <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class= "product__action-btn btn-favorite">
+                <i class="fa-regular fa-star"></i>
+                </button>
+                </td>
             </tr>
        ` 
        tableBody.innerHTML += tableRow; 
