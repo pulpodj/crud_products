@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Obj-Metodos</title>
+</head>
+<body>
+<h1>Obj Metodos</h1>
+
+<form class="product-form" id="add-product" onsubmit="addProduct(event)">
+    <div class="product-form__form-items">
+        <label for="name" >Nombre Producto</label><br>
+        <input type="text" name="name" class="product-form__form-input"
+        id="name" placeholder="Nombre del Producto" value="Nuevo Producto"
+        required minlength="3" maxlength="50" autofocus >
+    </div>
+    <div class="product-form__form-items">
+        <label for="description" >Descripción</label><br>
+        <textarea name="description" class="product-form__form-input"
+        id="description" rows="5" required> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, est. </textarea>
+    </div>
+    <div class="product-form__form-items">
+        <label for="price" >Precio</label><br>
+        <input type="number" name="price" id="price" required min="1" class="section-register__form-input" value="150000" > 
+    </div>  
+    <div class="product-form__form-items">
+        <label for="image">URL de Imagen:</label><br>
+        <input type="url" name="image" id="image"
+               placeholder="https://example.com"
+               pattern="https://.*" size="30"
+               required>
+    </div>
+     
+    <div class="product-form__form-items">
+        <label for="accesorios" >Accesorios</label><br>
+        <input class="product-form__form-chk"  type="checkbox" name="stock" id="stock" >
+        <label for="stock">Hay Stock</label><br> 
+        <input class="product-form__form-chk"  type="checkbox" name="jostick" id="joystick" >
+        <label for="joystick">Incluye Joystick</label><br> 
+        
+    </div>
+    <div class="product-form__form-items">
+        <label for="games">Incluye Juegos</label><br> 
+        <select name="gamesPicker" id="games">
+            <option value="" selected></option>
+            <option value="mario_bros">Mario Bros</option>
+            <option value="god_of_war">God of War</option>
+            <option value="sonic">Sonic</option>
+            <option value="uncharted">Uncharted</option>
+        </select>
+    </div>
+   
+    <div class="product-form__form-items">
+        <button type="submit" class="product-form__form-btn" >Cargar</button> 
+    </div>
+    
+</form>
+
+    <table class="table-product">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Producto</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Accesorios</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            
+        </tbody>
+    </table>
+
+    <script src="/js/object-exercice.js"></script>
+</body>
+</html>
